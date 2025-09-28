@@ -1,0 +1,57 @@
+* {
+    font-family: Assistant, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+}
+
+body{
+    background-color: #262a2f;
+}
+.container{
+    width: 300px;
+    margin-top: 12%;
+    margin-left: 37%;
+    background-color: #fff;
+    position: absolute;
+    padding: 10px 35px;
+    border-radius: 10px;
+}
+
+.container p{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.container input{
+    width: 92%;
+    height: 30px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    margin: 10px 0 20px;
+    padding: 10px;
+    outline: none;
+    background-color: #fff;
+    font-family : Assistant, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    font-family: 600;
+}
+
+.container button{
+    width: 100%;
+    height: 40px;
+    margin: 10px 0 20px;
+    background-color: rgb(64, 144, 236);
+    outline: none;
+    border-radius:5px ;
+
+}
+.imgbox{
+    max-height: 0px;
+    overflow:hidden;
+    transition: max-height 1s;
+}
+.imgbox.show-img{
+    max-height: 300px;
+    margin:10px auto;
+    border:1px solid #d1d1d1;
+
+}
