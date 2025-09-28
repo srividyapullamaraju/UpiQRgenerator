@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <p>Enter url or text</p>
+        <input id="inpid" type="text" placeholder="enter UPI id" spellcheck="false">
+        <input id="inpamt" type="number" placeholder="enter amount">
+
+        <div class="imgbox" style="padding-left:70px ;">
+            <img src="" alt="" class="qrimg">
+        </div>
+
+        <button id="but">generate QR Code</button>
+    </div>
+</body>
+<script>
+    let imgbox=document.querySelector(".imgbox");
+    let qrbox=document.querySelector(".qrimg");
+    const uid=document.querySelector("#inpid");
+    const amt=document.querySelector("#inpamt");
+    const srcbtn=document.querySelector("#but");
+    function qr(uid,amt) {
+        qrbox.src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=" + encodeURIComponent("upi://pay?pa="+ uid +"&pn=merchant&am=" + amt + "&cu=INR");
+        imgbox.classList.add("show-img");
+    }
+    srcbtn.addEventListener("click", ()=>{
+        qr(uid.value,amt.value);
+    }
+    )
+</script>
+</html>
